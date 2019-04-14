@@ -1,3 +1,4 @@
+### name the rows or columns ###
 > colnames=c("c1","c2","c3","c4")
 > rownames=c("r1","r2","r3")
 > x= matrix(1:12, nrow = 3, ncol=4, byrow = TRUE, dimnames = list(rownames,colnames))
@@ -90,22 +91,6 @@ c4  4  8 12
 > ncol(A)
 [1] 4
 
-### name the rows or columns ###
-> rownames(x)<-c("year","age","state")
-> x
-      c1 c2 c3 c4
-year   1  2  3  4
-age    5  6  7  8
-state  9 10 11 12
-
-> colnames(A)=c("id","class","name","scores")
-> A
-     id class name scores
-[1,]  2     1    1      1
-[2,]  1     2    1      1
-[3,]  1     1    2      1
-[4,]  1     1    1      2
-
 ### Calculation  ###
 > c=2
 > c*A
@@ -154,6 +139,8 @@ z
 [5,] 15 20 25 30 35
 
 ### |x × y| = |x|·|y|·sin<x,y> ###
+### outer(x，y，fun=”*”)=x%o%y ###
+
 q<-x%o%y
 > q
     [,1] [,2] [,3] [,4] [,5]
@@ -185,3 +172,8 @@ q<-x%o%y
 [1,]    4   16   28   40
 [2,]    8   20   32   44
 [3,]   12   24   36   48
+
+# the deteminat of matrix ###
+det(x)
+# the matrix rank ###
+qr(x)$rank
