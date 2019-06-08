@@ -51,7 +51,7 @@ factor_sex_vector <- factor(sex_vector)
 # Click 'Submit Answer' to check how R constructs and prints nominal and ordinal variables. 
 # Do not worry if you do not understand all the code just yet, we will get to that.
 
-
+### R SCRIPT
 # (1)
 > # Assign to the variable theory what this chapter is about!
 > theory <- "factors for categorical variables"
