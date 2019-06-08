@@ -11,7 +11,7 @@
 # Ask a summary() of the survey_vector and factor_survey_vector. Interpret the results of both vectors. 
 # Are they both equally useful in this case?
 
-# R SCRIPT
+### R SCRIPT
 > # Build factor_survey_vector with clean levels
 > survey_vector <- c("M", "F", "F", "M", "M")
 > factor_survey_vector <- factor(survey_vector)
