@@ -1,5 +1,5 @@
 ### What's a factor and why would you use it?
-(1)
+# (1)
 # In this chapter you dive into the wonderful world of factors.
 # The term factor refers to a statistical data type used to store categorical variables. 
 # The difference between a categorical variable and a continuous variable is that 
