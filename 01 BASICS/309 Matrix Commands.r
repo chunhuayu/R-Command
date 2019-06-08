@@ -7,7 +7,7 @@
 r1  1  2  3  4
 r2  5  6  7  8
 r3  9 10 11 12
-> y=t(x)
+> y=t(x)    # transpose matrix
 > y
    r1 r2 r3
 c1  1  5  9
@@ -18,16 +18,19 @@ c4  4  8 12
 > y<-c(1:10)
 > y
  [1]  1  2  3  4  5  6  7  8  9 10
+
 # transpose matrix
 > t(y)
      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
 [1,]    1    2    3    4    5    6    7    8    9    10
+
 # the class of y
 > class(y)
 [1] "integer"
 # the class of transposed matrix
 > class(t(y))
 [1] "matrix"
+
 > t(t(y))
       [,1]
  [1,]    1
@@ -40,8 +43,10 @@ c4  4  8 12
  [8,]    8
  [9,]    9
 [10,]   10
+
 > class(t(t(y)))
 [1] "matrix"
+
 # get a matrix which is random numbers following normal distribution with 10 rows
 > matrix(rnorm(100),nrow=10)
 
@@ -86,6 +91,7 @@ c4  4  8 12
 ### abtain the number of rows of matrix x ###
 > nrow(x)
 [1] 3
+
 ### abtain the number of columns of matrix A ###
 > ncol(A)
 [1] 4
@@ -176,3 +182,17 @@ q<-x%o%y
 det(x)
 # the matrix rank ###
 qr(x)$rank
+
+# All attributes of an object can be checked with the attributes() function(dimension can be checked directly with the dim())
+> a
+[,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> class(a)
+[1] "matrix"
+> attributes(a)
+$dim
+[1] 3 3
+> dim(a)
+[1] 3 3
