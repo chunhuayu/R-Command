@@ -24,7 +24,7 @@ survey_vector <- c("M", "F", "F", "M", "M")
 # Check out the code that builds a factor vector from survey_vector. 
 # Change the factor levels of factor_survey_vector to c("Female", "Male"). Mind the order of the vector elements here.
 
-# R SCRIPT
+### R SCRIPT
 > # Code to build factor_survey_vector
 > survey_vector <- c("M", "F", "F", "M", "M")
 > factor_survey_vector <- factor(survey_vector)
