@@ -17,7 +17,6 @@ my_df[1:3,2:4] # selects rows 1, 2, 3 and columns 2, 3, 4 in my_df.
 planets_df[1:3,2]
 # A possible disadvantage of this approach is that you have to know (or look up) the column number of type,
 # which gets hard if you have a lot of variables. It is often easier to just make use of the variable name:
-
 planets_df[1:3,"type"]
 
 
@@ -53,17 +52,6 @@ planets_df[1:3,"type"]
 4 Mars Terrestrial planet    0.532     1.03 FALSE
 > 
 # (2)
-> # The planets_df data frame from the previous exercise is pre-loaded
-> planets_df
-     name               type diameter rotation rings
-1 Mercury Terrestrial planet    0.382    58.64 FALSE
-2   Venus Terrestrial planet    0.949  -243.02 FALSE
-3   Earth Terrestrial planet    1.000     1.00 FALSE
-4    Mars Terrestrial planet    0.532     1.03 FALSE
-5 Jupiter          Gas giant   11.209     0.41  TRUE
-6  Saturn          Gas giant    9.449     0.43  TRUE
-7  Uranus          Gas giant    4.007    -0.72  TRUE
-8 Neptune          Gas giant    3.883     0.67  TRUE
 > # Select first 5 values of diameter column
 > planets_df[1:5,"diameter"]
 [1]  0.382  0.949  1.000  0.532 11.209
