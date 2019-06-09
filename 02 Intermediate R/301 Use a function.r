@@ -75,4 +75,17 @@ NULL
 [1] 22.28571
 > 
 
+# (4)
+> # The linkedin and facebook vectors have already been created for you
+> linkedin <- c(16, 9, 13, 5, NA, 17, 14)
+> facebook <- c(17, NA, 5, 16, 8, 13, 14)
+> 
+> # Basic average of linkedin
+> mean(linkedin)
+[1] NA
+> 
+> # Advanced average of linkedin
+> mean(linkedin,na.rm= TRUE)
+[1] 12.33333
+> 
 
