@@ -19,7 +19,8 @@ einstein
 # These times are gathered in the vectors login and logout, which are already defined in the workspace.
 
 ### Instructions
-# Calculate the difference between the two vectors logout and login, i.e. the time the user was online in each independent session. Store the result in a variable time_online.
+# Calculate the difference between the two vectors logout and login, i.e. 
+# the time the user was online in each independent session. Store the result in a variable time_online.
 # Inspect the variable time_online by printing it.
 # Calculate the total time that the user was online. Print the result.
 # Calculate the average time the user was online. Print the result.
