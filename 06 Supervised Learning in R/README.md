@@ -2,7 +2,7 @@
 # Training Website
 DataCamp
 # Course Description
-*This beginner-level introduction to machine learning covers four of the most common classification algorithms. You will come away with a basic understanding of how each algorithm approaches a learning task, as well as learn the R functions needed to apply these tools to your own work.
+* This beginner-level introduction to machine learning covers four of the most common classification algorithms. You will come away with a basic understanding of how each algorithm approaches a learning task, as well as learn the R functions needed to apply these tools to your own work.
 
 ## CHAPTER 1 k-Nearest Neighbors (kNN)
 * As the kNN algorithm literally "learns by example" it is a case in point for starting to understand supervised machine learning. This chapter will introduce classification while working through the application of kNN to self-driving vehicle road sign recognition.
