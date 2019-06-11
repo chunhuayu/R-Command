@@ -3,6 +3,7 @@ shape=
 size=
 alpha=
 fill=
+label=
 
 ### (1)
 
@@ -114,3 +115,25 @@ Note: In the mtcars dataset, cyl and am have been converted to factor for you.
 > # Map cyl to labels
 > ggplot(mtcars, aes(x = wt, y = mpg, label = cyl)) +
     geom_text()
+
+
+### (4)
+# 1.Add to the first command: draw points with alpha set to 0.5.
+# 2.Add to the second command: draw points of shape 24 in the color yellow.
+# 3.Add to the third command: draw text with label rownames(mtcars) in the color red. Don't use geom_point() here! 
+# ..You should get a scatter plot with the names of the cars instead of points.
+# Note: Remember to specify characters with quotation marks ("yellow", not yellow).
+
+### R
+> # Expand to draw points with alpha 0.5
+> ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl)) +
+  geom_point(alpha=0.5)
+> 
+> # Expand to draw points with shape 24 and color yellow
+> ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl)) +geom_point(shape=24,col="yellow")
+> 
+> 
+> # Expand to draw text with label rownames(mtcars) and color red
+> ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl, label=rownames(mtcars))) + geom_text(color="red")
+> 
+
