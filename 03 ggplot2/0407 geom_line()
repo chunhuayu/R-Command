@@ -1,0 +1,41 @@
+### Line plots
+
+# In the video you saw how to make line plots using time series data. 
+# To explore this topic, you'll use the economics data frame, 
+# which contains time series for unemployment and population statistics from the Federal Reserve Bank of St. Louis in the US.
+# The data is contained in the ggplot2 package.
+
+# look at how the median unemployment time and the unemployment rate
+# (the number of unemployed people as a proportion of the population) change over time.
+
+# In the next exercises, you'll explore to how add embellishments to the line plots, such as recession periods.
+
+### Instructions
+
+# 1. Print out the head() of the economics data frame.
+# 2. Use the economics data frame to plot date on the x axis and unemploy on the y-axis. Use geom_line().
+# 3. Copy, paste and adjust the code for the previous instruction: instead of unemploy, 
+# ...plot unemploy/pop to represent the fraction of the total population that is unemployed.
+
+### R
+
+> # Print out head of economics
+> head(economics)
+# A tibble: 6 x 6
+  date         pce    pop psavert uempmed unemploy
+  <date>     <dbl>  <int>   <dbl>   <dbl>    <int>
+1 1967-07-01  507. 198712    12.5     4.5     2944
+2 1967-08-01  510. 198911    12.5     4.7     2945
+3 1967-09-01  516. 199113    11.7     4.6     2958
+4 1967-10-01  513. 199311    12.5     4.9     3143
+5 1967-11-01  518. 199498    12.5     4.7     3066
+6 1967-12-01  526. 199657    12.1     4.8     3018
+> 
+> # Plot unemploy as a function of date using a line plot
+> ggplot(economics, aes(x = date, y = unemploy)) +
+  geom_line()
+> 
+> # Adjust plot to represent the fraction of total population that is unemployed
+> ggplot(economics, aes(x = date, y = unemploy/pop)) +
+  geom_line()
+> 
