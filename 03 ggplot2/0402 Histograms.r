@@ -19,10 +19,32 @@
 # You use ..density.. to access this information.
 
 ### Instructions
-100 XP
-Instructions
-100 XP
-1 - Use the mtcars data frame and make a univariate histogram by mapping mpg onto the x aesthetic. Use geom_histogram() for the geom layer.
-2 - Take plot 1 and manually create 1-unit wide bins with the binwidth = 1 argument in geom_histogram().
-3 - Take plot 2, and map ..density.. onto the y aesthetic (i.e. inside an aes()) inside geom_histogram(). You'll have two aes() functions: one inside ggplot() and another inside geom_histogram(). (See the intro text for a discussion of ..density..).
-4 - Take plot 3 and set the attribute fill, the inside of the bars, to the value "#377EB8" in geom_histogram(). This should not appear in aes(), since it's an attribute, not an aesthetic mapping.
+# 1 - Use the mtcars data frame and make a univariate histogram by mapping mpg onto the x aesthetic. 
+# ....Use geom_histogram() for the geom layer.
+# 2 - Take plot 1 and manually create 1-unit wide bins with the binwidth = 1 argument in geom_histogram().
+# 3 - Take plot 2, and map ..density.. onto the y aesthetic (i.e. inside an aes()) inside geom_histogram(). 
+# ....You'll have two aes() functions: one inside ggplot() and another inside geom_histogram(). 
+# ....(See the intro text for a discussion of ..density..).
+# 4 - Take plot 3 and set the attribute fill, the inside of the bars, to the value "#377EB8" in geom_histogram(). 
+# ....This should not appear in aes(), since it's an attribute, not an aesthetic mapping.
+
+> # 1 - Make a univariate histogram
+> ggplot(mtcars, aes(x = mpg)) +
+    geom_histogram()
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+> 
+> # 2 - Plot 1, plus set binwidth to 1 in the geom layer
+> ggplot(mtcars, aes(x = mpg)) +
+    geom_histogram(binwidth=1)
+> 
+> 
+> # 3 - Plot 2, plus MAP ..density.. to the y aesthetic (i.e. in a second aes() function)
+> ggplot(mtcars, aes(x = mpg)) +
+    geom_histogram(binwidth=1,aes(y=..density..))
+> 
+> 
+> # 4 - plot 3, plus SET the fill attribute to "#377EB8"
+> ggplot(mtcars, aes(x = mpg)) +
+    geom_histogram(binwidth=1,aes(y=..density..),fill="#377EB8")
+> 
+> 
